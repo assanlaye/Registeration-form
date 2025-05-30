@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-title">Registration Form</h1>
+        <form id="registrationForm" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="fullName" class="form-label">Full Name*</label>
+                    <input type="text" id="fullName" name="fullName" class="form-input" required>
+                    <div class="error-message" id="fullNameError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email*</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                    <div class="error-message" id="emailError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password*</label>
+                    <input type="password" id="password" name="password" class="form-input" required>
+                    <div class="error-message" id="passwordError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword" class="form-label">Confirm Password*</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required>
+                    <div class="error-message" id="confirmPasswordError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dateOfBirth" class="form-label">Date of Birth*</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-input" required>
+                    <div class="error-message" id="dateOfBirthError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephoneNumber" class="form-label">Telephone Number*</label>
+                    <input type="tel" id="telephoneNumber" name="telephoneNumber" class="form-input" required>
+                    <div class="error-message" id="telephoneNumberError" role="alert"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country" class="form-label">Country*</label>
+                    <select id="country" name="country" class="form-input select-input" required>
+                        <option value="">Select a country</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="JP">Japan</option>
+                        <option value="IN">India</option>
+                    </select>
+                    <div class="error-message" id="countryError" role="alert"></div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="form-label">I agree to the terms and conditions*</label>
+                    <div class="error-message" id="termsError" role="alert"></div>
+                </div>
+            </div>
+
+            <button class="form-button" type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+
+        <div id="summaryCard" class="hidden summary-card">
+            <h2 class="form-title">Registration Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <span>Full Name:</span>
+                    <span id="summaryFullName"></span>
+                </div>
+                <div class="summary-item">
+                    <span>Email:</span>
+                    <span id="summaryEmail"></span>
+                </div>
+                <div class="summary-item">
+                    <span>Password:</span>
+                    <span id="summaryPassword">••••••••</span>
+                </div>
+                <div class="summary-item">
+                    <span>Date of Birth:</span>
+                    <span id="summaryDateOfBirth"></span>
+                </div>
+                <div class="summary-item">
+                    <span>Telephone Number:</span>
+                    <span id="summaryTelephoneNumber"></span>
+                </div>
+                <div class="summary-item">
+                    <span>Country:</span>
+                    <span id="summaryCountry"></span>
+                </div>
+            </div>
+            <button id="resetBtn">Register Again</button>
+        </div>
+    </div>
+    
+</body>
+</html>
